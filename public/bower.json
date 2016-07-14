@@ -1,0 +1,24 @@
+{
+  "name": "FoldIt",
+  "version": "0.0.1",
+  "authors": [
+    "Rick Lamoreaux"
+  ],
+  "description": "FoldIt site assets",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2",
+    "snap.svg": "~0.4.1",
+    "tether": "~1.2.0",
+    "typeahead.js": "~0.11.1",
+    "fontawesome": "~4.6.3"
+  }
+}

@@ -1,0 +1,47 @@
+<a class="home" href="/">Home</a>
+<h1>Calibrate</h1>
+<form>
+    <fieldset class="form-group">
+        Show:
+        <input type="number" name="showSize" value="1" min="1" max="5"/>
+        <label class="radio-inline">
+            <input type="radio" name="showUnits" value="cm" id="showUnits-cm" checked/> cm
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="showUnits" value="in" id="showUnits-in"/> inches
+        </label>
+    </fieldset>
+    <fieldset class="form-group">
+        Actual:
+        <input type="number" name="actualSize" class="units" value="0" min="0" max="20" step="0.05"/>
+        <span class="units">cm</span>
+    </fieldset>
+    <fieldset class="form-group">
+        For:
+        <label class="radio-inline">
+            <input type="radio" name="saveFor" value="screen" id="saveFor-screen" checked/> Screen
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="saveFor" value="printer" id="saveFor-printer"/> Printer
+        </label>
+    </fieldset>
+    <fieldset class="form-group">
+        <button id="save" class="btn btn-primary">Save</button>
+    </fieldset>
+</form>
+<div class="center">
+    <svg id="calibration-square" width="1cm" height="1cm">
+        <rect width="100%" height="100%" style="fill:rgb(255,255,255);stroke-width:1;stroke:rgb(0,0,0);"/>
+    </svg>
+</div>
+<div class="center">
+    <svg id="calibrated-square" width="1cm" height="1cm">
+        <rect width="100%" height="100%" style="fill:rgb(255,255,255);stroke-width:1;stroke:rgb(0,128,0);"/>
+    </svg>
+</div>
+<div>
+    <hr/>
+    Screen Adjustment: <span id="screenMod">1.0</span><br/>
+    Printer Adjustment: <span id="printerMod">1.0</span>
+</div>
+<script src="/javascripts/calibrate.js"></script>
